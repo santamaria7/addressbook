@@ -1,4 +1,5 @@
 import React from "react";
+import "./user.scss";
 
 const UserItem: React.FC<UserProps> = ({ user }) => {
   const showDetails = () => {

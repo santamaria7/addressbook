@@ -68,7 +68,7 @@ const config: webpack.Configuration = {
           {
             loader: "sass-loader",
             options: {
-              data: `@import "src/css/partials/_variables";`,
+              prependData: '@import "src/css/partials/_variables";'
             },
           },
         ],
