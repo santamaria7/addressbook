@@ -57,4 +57,5 @@ type User = {
 
 type State = {
     users: User[];
+    loading: boolean;
 }

@@ -1,8 +1,24 @@
 import React from "react";
-import LoadingIcon from "../../../assets/spinner.gif";
+import "./loading.scss";
 const Loading = () => {
     return <div className="loading">
-        <img src={LoadingIcon} alt="Data is loading" />
+        <div className="loadingio-spinner-spinner-fpiuut30cn4">
+            <div className="ldio-cbw2rtfocq">
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+            </div>
+        </div>
+
     </div>
 };
 
