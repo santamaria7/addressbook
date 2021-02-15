@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
+import UsersList from "../components/UsersList";
 
-
-const HomePage = ()=> {
-    return <h1>Hello World</h1>
+const HomePage = () => {
+  return <UsersList />
 };
 
 export default HomePage;

@@ -4,7 +4,7 @@ import { actionTypes } from "../enums";
 
 const url = 'https://randomuser.me/api/';
 
-function* getUsers(action: Action) {
+function* getUsers(action: Action<undefined>) {
   try {
     const res = yield call<any>(httpClient, {
       method: "GET",
