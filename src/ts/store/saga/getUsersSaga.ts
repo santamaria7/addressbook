@@ -2,7 +2,7 @@ import { call, put, takeLatest } from "redux-saga/effects";
 import { httpClient } from "../../utils/httpClient";
 import { actionTypes } from "../enums";
 
-const url = 'https://randomuser.me/api/';
+const url = 'https://randomuser.me/api/?results=100';
 
 function* getUsers(action: Action<undefined>) {
   try {
@@ -18,6 +18,6 @@ function* getUsers(action: Action<undefined>) {
   }
 }
 
-export function* userProfileWatcher() {
+export function* getUsersWatcher() {
   yield takeLatest(actionTypes.GET_USERS, getUsers);
 }
