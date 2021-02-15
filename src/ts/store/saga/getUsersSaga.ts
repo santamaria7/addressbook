@@ -6,13 +6,12 @@ const url = 'https://randomuser.me/api/';
 
 function* getUsers(action: Action<undefined>) {
   try {
-    const res = yield call<any>(httpClient, {
+    const {results} = yield call<any>(httpClient, {
       method: "GET",
-      url: `/${url}`,
+      url,
       data: {},
     });
-    console.log(res);
-    yield put({ type: actionTypes.USERS_RECEIVED, payload: res });
+    yield put({ type: actionTypes.USERS_RECEIVED, payload: results });
   } catch (err) {
     console.log(err);
     yield put({ type: "FAILURE", payload: err });

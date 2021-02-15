@@ -5,7 +5,7 @@ import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 const config: webpack.Configuration = {
-  mode: "production",
+  mode: "development",
   entry: "./src/index.tsx",
   output: {
     filename: "[name].min.js",

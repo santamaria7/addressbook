@@ -55,7 +55,7 @@ export async function httpClient(params: ParamsType) {
     }
 
     let xhr = new XMLHttpRequest();
-    xhr.open(method, `http://localhost:9000${url}`, true);
+    xhr.open(method, url, true);
 
     setUpRequestHeaders(xhr, params);
 
