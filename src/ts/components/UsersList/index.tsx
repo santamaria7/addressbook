@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUsersAction } from "../../store/actions/getUsersAction";
 import UserItem from "../User";
 import Loading from "../Loading";
+import "./users.scss";
 
 const UsersList = () => {
   const users: User[] = useSelector<State>((state) => state.users) as User[];
@@ -14,7 +15,7 @@ const UsersList = () => {
     dispatch(getUsersAction());
   }, []);
   return (
-    <>
+    <div className="users">
       {loading ? (
         <Loading />
       ) : (
@@ -22,7 +23,7 @@ const UsersList = () => {
           return <UserItem user={user} key={user.id.value} />;
         })
       )}
-    </>
+    </div>
   );
 };
 
