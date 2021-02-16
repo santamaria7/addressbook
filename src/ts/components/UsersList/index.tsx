@@ -1,40 +1,11 @@
-import React, { useEffect, useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getUsersAction } from "../../store/actions/getUsersAction";
+import React from "react";
 import UserItem from "../User";
 import Loading from "../Loading";
 import "./users.scss";
+import { useUsersList } from "./useUsersList";
 
 const UsersList = () => {
-  const users: User[] = useSelector<State>((state) => state.users) as User[];
-  const loading: boolean = useSelector<State>(
-    (state) => state.loading
-  ) as boolean;
-  const { isFiltered, first, last } = useSelector<State>(
-    (state) => state.search
-  ) as SearchState;
-  const dispatch = useDispatch();
-
-  const list = useMemo(() => {
-    if (isFiltered) {
-      const temp = users.filter(
-        (user) =>
-          user.name.first.toLowerCase() === first?.toLowerCase() ||
-          user.name.last.toLowerCase() === last?.toLowerCase()
-      );
-      return temp.length > 0 ? temp : users;
-    }
-    return users;
-  }, [isFiltered, first, last, users]);
-
-  useEffect(() => {
-    dispatch(
-      getUsersAction({
-        page: 1,
-        results: 10,
-      })
-    );
-  }, []);
+  const {loading, list} = useUsersList();
   return (
     <div className="users">
       {loading ? (
