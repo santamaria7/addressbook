@@ -12,7 +12,7 @@ export const useUsersList = () => {
     (state) => state.search
   ) as SearchState;
 
-  const list = useMemo(() => {
+  const list: User[] = useMemo(() => {
     if (isFiltered) {
       const temp = users.filter(
         (user) =>
@@ -28,7 +28,7 @@ export const useUsersList = () => {
     dispatch(
       getUsersAction({
         page: 1,
-        results: 10,
+        results: 50,
       })
     );
   }, []);

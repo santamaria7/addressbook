@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./search.scss";
 import { useSearch } from "./useSearch";
 
@@ -7,11 +7,13 @@ const Search = () => {
     submitForm,
     handleFirstChange,
     handleLastChange,
+    fixed,
     first,
     last,
   } = useSearch();
+
   return (
-    <div className="search">
+    <div className={`search ${fixed ? "fixed" : ""}`}>
       <form onSubmit={submitForm}>
         <div>
           <label htmlFor="firstName">First name: </label>
