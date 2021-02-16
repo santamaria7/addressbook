@@ -15,7 +15,11 @@ const UserItem: React.FC<UserProps> = ({ user }) => {
           alt={`${user.name.first} ${user.name.last}`}
         />
       </div>
-      <span className="user__name">{`${user.name.first} ${user.name.last}`}</span>
+        <div className="user__details">
+            <p>{user.login.username}</p>
+            <p>{`${user.name.first} ${user.name.last}`}</p>
+            <p>{user.email}</p>
+        </div>
     </div>
   );
 };
