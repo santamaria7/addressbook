@@ -1,16 +1,26 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import "./search.scss";
+import { useDispatch } from "react-redux";
+import { findUserAction } from "../../store/actions/findUserAction";
 
 const Search = () => {
-  const [value, setValue] = useState("");
+  const [first, setFirst] = useState("");
+  const [last, setLast] = useState("");
+  const dispatch = useDispatch();
   const submitForm = (e: FormEvent) => {
     e.preventDefault();
+    dispatch(findUserAction({
+      first,
+      last
+    }))
   };
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value);
+  const handleFirstChange = (e: ChangeEvent<HTMLInputElement>) => setFirst(e.target.value);
+  const handleLastChange = (e: ChangeEvent<HTMLInputElement>) => setLast(e.target.value);
   return (
     <div className="search">
       <form onSubmit={submitForm}>
-        <input type="text" value={value} onChange={handleChange} />
+        <input type="text" value={first} onChange={handleFirstChange} name="first"/>
+        <input type="text" value={last} onChange={handleLastChange} name="last"/>
         <button type="submit">Go</button>
       </form>
     </div>

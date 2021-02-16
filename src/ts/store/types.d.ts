@@ -1,12 +1,17 @@
 type Action<T> = {
   type: string;
-  payload?:T;
+  payload?: T;
 };
 
 type getUsersPayload = {
   page: number;
   results: number;
-}
+};
+
+type findUserPayload = {
+  first: string;
+  last: string;
+};
 
 type User = {
   gender: string;
@@ -61,7 +66,14 @@ type User = {
   nat: string;
 };
 
+type SearchState = {
+  isFiltered: boolean;
+  first?: string;
+  last?: string;
+};
+
 type State = {
-    users: User[];
-    loading: boolean;
-}
+  users: User[];
+  loading: boolean;
+  search: SearchState;
+};

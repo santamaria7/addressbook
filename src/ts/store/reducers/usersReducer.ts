@@ -7,6 +7,6 @@ export function usersReducer(state = INITIAL_STATE, action: Action<User>) {
     case actionTypes.USERS_RECEIVED:
       return action.payload;
     default:
-      return [];
+      return state;
   }
 }

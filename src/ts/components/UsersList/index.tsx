@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsersAction } from "../../store/actions/getUsersAction";
 import UserItem from "../User";
@@ -10,7 +10,23 @@ const UsersList = () => {
   const loading: boolean = useSelector<State>(
     (state) => state.loading
   ) as boolean;
+  const { isFiltered, first, last } = useSelector<State>(
+    (state) => state.search
+  ) as SearchState;
   const dispatch = useDispatch();
+
+  const list = useMemo(() => {
+    if (isFiltered) {
+      const temp = users.filter(
+        (user) =>
+          user.name.first.toLowerCase() === first ||
+          user.name.last.toLowerCase() === last
+      );
+      return temp.length > 0 ? temp : users;
+    }
+    return users;
+  }, [isFiltered, first, last, users]);
+
   useEffect(() => {
     dispatch(
       getUsersAction({
@@ -24,7 +40,7 @@ const UsersList = () => {
       {loading ? (
         <Loading />
       ) : (
-        users.map((user, index) => {
+        list.map((user, index) => {
           return <UserItem user={user} key={`${index}-${user.id.value}`} />;
         })
       )}
