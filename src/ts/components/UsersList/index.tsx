@@ -12,18 +12,20 @@ const UsersList = () => {
   ) as boolean;
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getUsersAction({
-      page:1,
-      results: 10
-    }));
+    dispatch(
+      getUsersAction({
+        page: 1,
+        results: 10,
+      })
+    );
   }, []);
   return (
     <div className="users">
       {loading ? (
         <Loading />
       ) : (
-        users.map((user) => {
-          return <UserItem user={user} key={user.id.value} />;
+        users.map((user, index) => {
+          return <UserItem user={user} key={`${index}-${user.id.value}`} />;
         })
       )}
     </div>

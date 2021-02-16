@@ -1,0 +1,16 @@
+.search {
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 1px 1px 8px rgba(8, 79, 90, 0.38);
+  form {
+    display: flex;
+  }
+  input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #bebebe;
+  }
+  button {
+    padding: 5px;
+  }
+}
