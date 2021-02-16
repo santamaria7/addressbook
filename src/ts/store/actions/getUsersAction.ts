@@ -1,7 +1,10 @@
 import { actionTypes } from "../enums";
 
-export function getUsersAction() {
+
+
+export function getUsersAction(payload: getUsersPayload) {
   return {
     type: actionTypes.GET_USERS,
+    payload
   };
 }

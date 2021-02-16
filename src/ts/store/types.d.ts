@@ -2,6 +2,12 @@ type Action<T> = {
   type: string;
   payload?:T;
 };
+
+type getUsersPayload = {
+  page: number;
+  results: number;
+}
+
 type User = {
   gender: string;
   name: {

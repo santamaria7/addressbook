@@ -12,7 +12,10 @@ const UsersList = () => {
   ) as boolean;
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getUsersAction());
+    dispatch(getUsersAction({
+      page:1,
+      results: 10
+    }));
   }, []);
   return (
     <div className="users">
