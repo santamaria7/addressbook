@@ -19,8 +19,8 @@ const UsersList = () => {
     if (isFiltered) {
       const temp = users.filter(
         (user) =>
-          user.name.first.toLowerCase() === first ||
-          user.name.last.toLowerCase() === last
+          user.name.first.toLowerCase() === first?.toLowerCase() ||
+          user.name.last.toLowerCase() === last?.toLowerCase()
       );
       return temp.length > 0 ? temp : users;
     }

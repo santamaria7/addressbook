@@ -4,13 +4,23 @@
   box-shadow: 1px 1px 8px rgba(8, 79, 90, 0.38);
   form {
     display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  div {
+    flex-grow: 1;
+    min-width: 46%;
+    max-width: 46%;
   }
   input {
-    flex-grow: 1;
     padding: 5px;
     border: 1px solid #bebebe;
+    width: 100%;
   }
   button {
-    padding: 5px;
+    padding: 4px 5px;
+  }
+  label {
+    display: block;
   }
 }
