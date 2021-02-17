@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect, useMemo } from "react";
 import { getUsersAction } from "../../store/actions/getUsersAction";
 import { checkScrollIsAtBottom } from "../../utils/checkScrollIsAtBottom";
+import { filterUsers } from "../../utils/filterUsers";
 
 export const useUsersList = () => {
   const dispatch = useDispatch();
@@ -16,11 +17,9 @@ export const useUsersList = () => {
   const list: User[] = useMemo(() => {
     if (isFiltered) {
       const temp = users.filter(
-        (user) =>
-          user.name.first.toLowerCase() === first?.toLowerCase() ||
-          user.name.last.toLowerCase() === last?.toLowerCase()
+        (user) => filterUsers(user, first, last)
       );
-      return temp.length > 0 ? temp : users;
+      return temp.length > 0 ? temp : [];
     }
     return users;
   }, [isFiltered, first, last, users]);
