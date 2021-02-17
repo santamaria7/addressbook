@@ -30,6 +30,7 @@ const config: webpack.Configuration = {
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, "build"),
     compress: true,
     port: 4000,
@@ -67,9 +68,9 @@ const config: webpack.Configuration = {
           },
           {
             loader: "sass-loader",
-            options: {
+           /* options: {
               prependData: '@import "src/css/partials/_variables";'
-            },
+            },*/
           },
         ],
       },

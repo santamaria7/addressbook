@@ -1,9 +1,8 @@
 import React from "react";
-import UsersList from "../components/UsersList";
-import "./homepage.scss";
-import Search from "../components/Search";
+import UsersList from "../../components/UsersList";
+import Search from "../../components/Search";
 
-const HomePage = () => {
+function HomePage () {
   return (
     <div className="page">
       <h1 className="page__title">My Address Book</h1>
