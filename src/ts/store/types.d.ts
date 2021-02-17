@@ -5,7 +5,7 @@ type Action<T> = {
 
 type getUsersPayload = {
   page: number;
-  results: number;
+  seed?: string;
 };
 
 type findUserPayload = {
@@ -76,4 +76,15 @@ type State = {
   users: User[];
   loading: boolean;
   search: SearchState;
+  pagination: PaginationType;
+};
+type PaginationType = {
+  limit?: number;
+  offset?: number;
+  seed?: string;
+};
+
+type UserReceivedType = {
+  results: User[];
+  pagination: PaginationType;
 };

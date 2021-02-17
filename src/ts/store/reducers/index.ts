@@ -2,10 +2,12 @@ import { combineReducers } from "redux";
 import { usersReducer } from "./usersReducer";
 import { loadingReducer } from "./loadingReducer";
 import { searchReducer } from "./searchReducer";
+import { paginationReducer } from "./paginationReducer";
 
 const rootReducer= combineReducers({
   users: usersReducer,
   loading: loadingReducer,
-  search: searchReducer
+  search: searchReducer,
+  pagination: paginationReducer // In a real world, large-scale project, we use a different approach to keep track of the pagination
 });
 export default rootReducer;
