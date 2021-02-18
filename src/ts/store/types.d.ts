@@ -6,6 +6,7 @@ type Action<T> = {
 type getUsersPayload = {
   page: number;
   seed?: string;
+  nat?: string;
 };
 
 type findUserPayload = {
@@ -77,6 +78,7 @@ type State = {
   loading: boolean;
   search: SearchState;
   pagination: PaginationType;
+  nationality: string | undefined;
 };
 type PaginationType = {
   limit?: number;

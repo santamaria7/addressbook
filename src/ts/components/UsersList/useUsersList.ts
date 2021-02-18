@@ -18,6 +18,10 @@ export const useUsersList = () => {
     (state) => state.pagination
   ) as PaginationType;
 
+  const nationality = useSelector<State>(
+    (state) => state.nationality
+  ) as string;
+
   const list: User[] = useMemo(() => {
     if (isFiltered) {
       const temp = users.filter((user) => filterUsers(user, first, last));
@@ -29,20 +33,29 @@ export const useUsersList = () => {
   const handleScroll = useCallback(() => {
     const bottomOfWindow = checkScrollIsAtBottom();
     if (bottomOfWindow && offset && !loading) {
+      const payload: getUsersPayload = {
+        page: offset + 1,
+        seed,
+      };
+      if(nationality.length > 0){
+        payload.nat = nationality;
+      }
       dispatch(
-        getUsersAction({
-          page: offset + 1,
-          seed,
-        })
+        getUsersAction(payload)
       );
     }
   }, [seed, offset, loading]);
 
   useEffect(() => {
+    const savedNat = localStorage.getItem('nat');
+    const payload: getUsersPayload = {
+      page: 1,
+    };
+    if(savedNat){
+      payload.nat = savedNat;
+    }
     dispatch(
-      getUsersAction({
-        page: 1,
-      })
+      getUsersAction(payload)
     );
   }, []);
 
@@ -55,5 +68,15 @@ export const useUsersList = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
+
+  useEffect(() => {
+   nationality.length > 0 && dispatch(
+      getUsersAction({
+        page: 1,
+        nat: nationality,
+      })
+    );
+  }, [nationality]);
+
   return { loading, list };
 };
