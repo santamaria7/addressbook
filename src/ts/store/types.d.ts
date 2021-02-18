@@ -22,7 +22,7 @@ type User = {
     last: string;
   };
   location: {
-    street: string;
+    street: string | { number: string; name: string };
     city: string;
     state: string;
     postcode: string;
