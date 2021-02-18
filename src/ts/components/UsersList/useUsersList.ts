@@ -37,27 +37,12 @@ export const useUsersList = () => {
         page: offset + 1,
         seed,
       };
-      if(nationality.length > 0){
+      if (nationality.length > 0) {
         payload.nat = nationality;
       }
-      dispatch(
-        getUsersAction(payload)
-      );
+      dispatch(getUsersAction(payload));
     }
   }, [seed, offset, loading]);
-
-  useEffect(() => {
-    const savedNat = localStorage.getItem('nat');
-    const payload: getUsersPayload = {
-      page: 1,
-    };
-    if(savedNat){
-      payload.nat = savedNat;
-    }
-    dispatch(
-      getUsersAction(payload)
-    );
-  }, []);
 
   useEffect(() => {
     // handleScroll depends on seed and offset. if we put events in the other useEffect,
@@ -70,7 +55,7 @@ export const useUsersList = () => {
   }, [handleScroll]);
 
   useEffect(() => {
-   nationality.length > 0 && dispatch(
+    dispatch(
       getUsersAction({
         page: 1,
         nat: nationality,

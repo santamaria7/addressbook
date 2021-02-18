@@ -10,6 +10,8 @@ export function usersReducer(
     case actionTypes.USERS_RECEIVED:
       const temp = state.slice();
       return temp.concat(action.payload?.results!);
+    case actionTypes.EMPTY_LIST:
+      return [];
     default:
       return state;
   }
