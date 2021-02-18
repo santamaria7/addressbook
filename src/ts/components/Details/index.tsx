@@ -15,7 +15,7 @@ const Details: React.FC<ModalProps> = ({ user, closeAction }) => {
         +
       </button>
       <div className="content">
-        <div className="user">
+        <div className="user full">
           <div className="user__img medium">
             <img
               src={user.picture.medium}

@@ -5,15 +5,23 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-  position:relative;
+  position: relative;
   margin: 0;
   font-family: sans-serif, monospace;
 }
 .page {
   width: 100%;
-  position:relative;
+  position: relative;
   &__title {
     text-align: center;
     font-size: 28px;
+  }
+}
+nav {
+  li {
+    display: inline-block;
+    color: darkcyan;
+    font-weight: bold;
+    margin-right: 10px;
   }
 }
