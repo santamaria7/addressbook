@@ -11,7 +11,7 @@ import Settings from "./pages/Settings";
 export default function App() {
     return (
         <Router>
-            <div>
+            <>
                 <nav>
                     <ul>
                         <li>
@@ -26,7 +26,7 @@ export default function App() {
                     <Route path="/" exact component={HomePage} />
                     <Route path="/settings" exact component={Settings} />
                 </Switch>
-            </div>
+            </>
         </Router>
     );
 }
