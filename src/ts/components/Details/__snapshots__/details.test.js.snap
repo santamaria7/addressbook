@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user details should render the user details with mock data 1`] = `
+<div
+  className="modal"
+  id="modal"
+  onClick={[Function]}
+>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    +
+  </button>
+  <div
+    className="content"
+  >
+    <div
+      className="user full"
+    >
+      <div
+        className="user__img medium"
+      >
+        <img
+          alt="brad gibson"
+          src="https://randomuser.me/api/portraits/med/men/75.jpg"
+        />
+      </div>
+      <div
+        className="user__details"
+      >
+        <p>
+          silverswan131
+        </p>
+        <p>
+          brad gibson
+        </p>
+        <p>
+          brad.gibson@example.com
+        </p>
+        <p>
+          Phone: 
+          011-962-7516
+        </p>
+        <p>
+          Cell: 
+          081-454-0666
+        </p>
+        <p>
+          <strong>
+            Address:
+          </strong>
+        </p>
+        <p>
+          9278 new road
+        </p>
+        <p>
+          city: 
+          kilcoole
+        </p>
+        <p>
+          state: 
+          waterford
+        </p>
+        <p>
+          postcode: 
+          93027
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
