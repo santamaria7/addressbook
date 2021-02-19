@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render user component should render user component with mock data 1`] = `
+<div
+  className="user"
+  onClick={[Function]}
+>
+  <div
+    className="user__img"
+  >
+    <img
+      alt="brad gibson"
+      src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
+    />
+  </div>
+  <div
+    className="user__details"
+  >
+    <p>
+      silverswan131
+    </p>
+    <p>
+      brad gibson
+    </p>
+    <p>
+      brad.gibson@example.com
+    </p>
+  </div>
+</div>
+`;
+
+exports[`render user component should render user component with mock data 2`] = `
+<div
+  className="user"
+  onClick={[Function]}
+>
+  <div
+    className="user__img"
+  >
+    <img
+      alt="brad gibson"
+      src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
+    />
+  </div>
+  <div
+    className="user__details"
+  >
+    <p>
+      silverswan131
+    </p>
+    <p>
+      brad gibson
+    </p>
+    <p>
+      brad.gibson@example.com
+    </p>
+  </div>
+</div>
+`;
