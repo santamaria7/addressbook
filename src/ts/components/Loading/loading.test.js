@@ -3,8 +3,8 @@ import React from "react";
 import Loading from "./index";
 
 
-describe('user details', function(){
-    it('should render the user details with mock data',function(){
+describe('Loading Component', function(){
+    it('should render the loading component',function(){
 
         const component = renderer.create(<Loading />);
         let tree = component.toJSON();
