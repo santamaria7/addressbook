@@ -5,13 +5,13 @@
   "description": "Test assignment for Sherpany",
   "main": "src/ts/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage --watchAll=false",
     "start": "webpack serve --open",
     "build": "webpack --mode development"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/santamaria7/addressbook"
   },
   "author": "marzieh.bahri",
   "license": "MIT",
@@ -95,6 +95,7 @@
     "verbose": true,
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "babel-jest"
-    }
+    },
+    "coverageReporters": ["text-summary"]
   }
 }
