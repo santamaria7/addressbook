@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user details should render the user details with mock data 1`] = `
+<div
+  className="loading"
+>
+  <div
+    className="loadingio-spinner-spinner-fpiuut30cn4"
+  >
+    <div
+      className="ldio-cbw2rtfocq"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+  </div>
+</div>
+`;
