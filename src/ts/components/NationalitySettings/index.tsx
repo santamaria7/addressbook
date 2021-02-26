@@ -1,9 +1,4 @@
 import * as React from "react";
-import { ChangeEvent, FormEvent, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setNationalityAction } from "../../store/actions/setNationalityAction";
-import { useHistory } from "react-router-dom";
-import { emptyUsersListAction } from "../../store/actions/emptyUsersListAction";
 import "./settings.scss";
 import { useNationalitySettings } from "./useNationalitySettings";
 
@@ -12,9 +7,9 @@ const NationalitySettings = () => {
 
   return (
     <div className="settings">
-      <form onSubmit={submitForm}>
-        <label>Set preferred nationality:</label>
-        <select value={value} onChange={changeNatValue}>
+      <form onSubmit={submitForm} role="form">
+        <label htmlFor="select">Set preferred nationality:</label>
+        <select value={value} onChange={changeNatValue} id="select">
           <option value="CH">CH</option>
           <option value="ES">ES</option>
           <option value="FR">FR</option>

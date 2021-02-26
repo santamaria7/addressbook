@@ -1,4 +1,4 @@
-import {takeLatest} from "@redux-saga/core/effects";
+import {takeLatest} from "redux-saga/effects";
 import {getUsers, getUsersWatcher} from "./getUsersSaga";
 
 describe('Get Users', () => {

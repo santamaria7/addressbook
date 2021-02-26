@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NationalitySetting Component should render nationality settings successfully 1`] = `
+<div
+  className="settings"
+>
+  <form
+    onSubmit={[Function]}
+    role="form"
+  >
+    <label
+      htmlFor="select"
+    >
+      Set preferred nationality:
+    </label>
+    <select
+      id="select"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value="CH"
+      >
+        CH
+      </option>
+      <option
+        value="ES"
+      >
+        ES
+      </option>
+      <option
+        value="FR"
+      >
+        FR
+      </option>
+      <option
+        value="GB"
+      >
+        GB
+      </option>
+    </select>
+    <button
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</div>
+`;

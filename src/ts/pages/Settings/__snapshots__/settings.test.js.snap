@@ -14,11 +14,15 @@ exports[`SettingsPage should render settings page - with snapshot 1`] = `
   >
     <form
       onSubmit={[Function]}
+      role="form"
     >
-      <label>
+      <label
+        htmlFor="select"
+      >
         Set preferred nationality:
       </label>
       <select
+        id="select"
         onChange={[Function]}
         value=""
       >
