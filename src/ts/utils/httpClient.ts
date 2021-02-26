@@ -20,7 +20,7 @@ type ParamsType = {
  * @param xhr
  * @param params
  */
-function setUpRequestHeaders(xhr: XMLHttpRequest, params: ParamsType) {
+export function setUpRequestHeaders(xhr: XMLHttpRequest, params: ParamsType) {
   const { hasHeader = true, headers = {} } = params;
   if (hasHeader) {
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
