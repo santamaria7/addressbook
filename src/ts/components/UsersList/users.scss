@@ -9,10 +9,10 @@
     flex-grow: 1;
     min-width: 49%;
     max-width: 49%;
-   &.full{
-     min-width: 100%;
-     max-width: 100%;
-   }
+    &.full {
+      min-width: 100%;
+      max-width: 100%;
+    }
     @media screen and (max-width: 359px) {
       min-width: 100%;
       max-width: 100%;

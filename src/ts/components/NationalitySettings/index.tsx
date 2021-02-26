@@ -3,7 +3,12 @@ import "./settings.scss";
 import { useNationalitySettings } from "./useNationalitySettings";
 
 const NationalitySettings = () => {
- const {submitForm, value, changeNatValue, showSuccess} = useNationalitySettings()
+  const {
+    submitForm,
+    value,
+    changeNatValue,
+    showSuccess,
+  } = useNationalitySettings();
 
   return (
     <div className="settings">

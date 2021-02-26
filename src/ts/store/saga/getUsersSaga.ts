@@ -1,6 +1,7 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import { httpClient } from "../../utils/httpClient";
 import { actionTypes } from "../enums";
+import { usersReceivedAction } from "../actions/usersReceivedAction";
 
 const url = "https://randomuser.me/api/?";
 
@@ -17,16 +18,15 @@ export function* getUsers(action: Action<getUsersPayload>) {
       url: modifiedUrl,
       data: {},
     });
-    yield put({
-      type: actionTypes.USERS_RECEIVED,
-      payload: {
+    yield put(
+      usersReceivedAction({
         results,
         pagination: {
           offset: action.payload!.page,
           seed,
         },
-      },
-    });
+      })
+    );
   } catch (err) {
     console.log(err);
     yield put({ type: "FAILURE", payload: err });

@@ -7,5 +7,4 @@ describe("emptyUsersListAction", function () {
       type: "empty_list",
     });
   });
-
 });

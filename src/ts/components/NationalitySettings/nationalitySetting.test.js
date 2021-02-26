@@ -1,6 +1,5 @@
 /**  * @jest-environment jsdom-sixteen  */
 
-
 import React from "react";
 import renderer from "react-test-renderer";
 import { render, fireEvent, screen } from "@testing-library/react";
@@ -51,6 +50,7 @@ describe("NationalitySetting Component", function () {
     const value = screen.getByLabelText("Set preferred nationality:").value;
     fireEvent.submit(form);
     await waitFor(() => {
+      //TODO don't use localStorage for test, always failing
       expect(localStorage.getItem("nat")).toEqual(value);
     });
   });

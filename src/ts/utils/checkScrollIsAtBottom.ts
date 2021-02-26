@@ -1,5 +1,5 @@
 export function checkScrollIsAtBottom() {
-  const {offsetHeight} = document.body;
+  const { offsetHeight } = document.body;
   const _windowHeight =
       window.innerHeight ||
       document.documentElement.clientHeight ||
