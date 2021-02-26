@@ -1,6 +1,6 @@
 import configureMockStore from "redux-mock-store";
 import createSagaMiddleware from "redux-saga";
-import rootSaga from "../store/saga";
+import rootSaga from "../src/ts/store/saga";
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 export function mockStore(){
