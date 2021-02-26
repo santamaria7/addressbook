@@ -4,7 +4,7 @@ import { actionTypes } from "../enums";
 
 const url = "https://randomuser.me/api/?";
 
-function* getUsers(action: Action<getUsersPayload>) {
+export function* getUsers(action: Action<getUsersPayload>) {
   const modifiedUrl = `${url}page=${action.payload!.page}&results=50${
     action.payload!.seed ? "&seed=" + action.payload!.seed : ""
   }${action.payload!.nat ? "&nat=" + action.payload!.nat : ""}`;
