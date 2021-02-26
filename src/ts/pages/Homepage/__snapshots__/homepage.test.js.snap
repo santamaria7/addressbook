@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage should render home page - with snapshot 1`] = `
+<div
+  className="page"
+>
+  <h1
+    className="page__title"
+  >
+    My Address Book
+  </h1>
+  <div
+    className="search "
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <div>
+        <label
+          htmlFor="firstName"
+        >
+          First name: 
+        </label>
+        <input
+          id="firstName"
+          name="first"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          htmlFor="lastName"
+        >
+          Last name: 
+        </label>
+        <input
+          id="lastName"
+          name="last"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        type="submit"
+      >
+        Go
+      </button>
+    </form>
+  </div>
+  <div
+    className="users"
+  />
+</div>
+`;

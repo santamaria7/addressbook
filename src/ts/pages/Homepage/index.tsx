@@ -10,6 +10,6 @@ function HomePage () {
       <UsersList />
     </div>
   );
-};
+}
 
 export default HomePage;
