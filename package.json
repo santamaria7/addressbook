@@ -5,7 +5,7 @@
   "description": "Test assignment for Sherpany",
   "main": "src/ts/index.js",
   "scripts": {
-    "test": "jest --config=jest.config.json --coverage  --env=jest-environment-jsdom-sixteen",
+    "test": "jest  --coverage  --env=jest-environment-jsdom-sixteen",
     "start": "webpack serve --open",
     "build": "webpack --mode development"
   },
@@ -95,5 +95,26 @@
     "redux": "^4.0.5",
     "redux-saga": "^1.1.3",
     "typescript": "^4.1.5"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    },
+    "coverageReporters": [
+      "text-summary"
+    ],
+    "testRegex": "/*.test.js$",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "moduleDirectories": ["node_modules", "src"]
   }
 }
